@@ -18,6 +18,7 @@ Unlike the [Barrel Battery Blaster](https://github.com/scrapcomputing/BarrelBatt
 # Features
 - Uses a standard through-hole CR2032 battery holder of the horizontal type
 - Accepts 3 types of diode footprints: through-hole (e.g., 1N5817), 1206 and SOT23 ANK (e.g., BAS40-04)
+- Rev.0.2. includes solder pads for a MAX40200 SOT23-5 ideal diode. This is great for older systems that need as little voltage drop as possible.
 
 # Video
 https://www.youtube.com/watch?v=v_9UKSxLt-k
@@ -25,7 +26,7 @@ https://www.youtube.com/watch?v=v_9UKSxLt-k
 # Similar Projects
 - [Vertical Battery Blaster](https://github.com/scrapcomputing/VerticalBarrelBatteryBlaster)
 - [Barrel Battery Blaster](https://github.com/scrapcomputing/BarrelBatteryBlaster)
-
+- [Not-A-Varta](https://github.com/wiretap-retro/Not-A-Varta-CR2032)
 
 # How can I get one?
 
@@ -39,5 +40,9 @@ Item                                             | #   | Description
 -------------------------------------------------|-----|-----------------------------------------
 Pins out of an male header (usually 2.54mm pitch)| 2   | For connecting the BarrelBatteryBlaster to the motherboard
 Horizontally mounted CR2032 battery holder       | 1   | For the CR2032 Lithium battery
-Diode (preferably Schottky)                      | 1   | Through-hole (e.g., 1N5817) or 1206 or SOT23 ANK (current flows pin1 -> pin3 like in BAS40 or BAS40-04)
+Diode or Ideal diode                             | 1   | Through-hole (e.g., 1N5817) or 1206 or SOT23 ANK (current flows pin1 -> pin3 like in BAS40 or BAS40-04) or MAX40200 SOT23-5 ideal didoe
 
+
+# Changelist
+rev.0.1: Original revision 
+rev.0.2: Adds solder pads for MAX40200 ideal diode

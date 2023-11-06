@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Horizontal Barrel Battery Blaster"
-Date "2023-07-04"
-Rev "rev.0.1"
+Date "2023-11-06"
+Rev "rev.0.2"
 Comp "Scrap Computing"
 Comment1 ""
 Comment2 ""
@@ -37,8 +37,6 @@ F 3 "~" H 4200 3250 50  0001 C CNN
 	1    4200 3250
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4350 3250 4450 3250
 $Comp
 L Device:Battery_Cell BarrelBattery1
 U 1 1 63AE9158
@@ -62,19 +60,10 @@ F 3 "~" H 4200 2900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4450 3250 4450 2900
-Wire Wire Line
-	4450 2900 4350 2900
-Connection ~ 4450 3250
-Wire Wire Line
 	4050 2900 3700 2900
 Wire Wire Line
 	3700 2900 3700 3250
 Connection ~ 3700 3250
-Wire Wire Line
-	4250 3800 4450 3800
-Wire Wire Line
-	4450 3250 4450 3800
 Wire Wire Line
 	3700 3800 3950 3800
 Wire Wire Line
@@ -91,11 +80,6 @@ F 3 "~" H 4200 2550 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4450 2900 4450 2550
-Wire Wire Line
-	4450 2550 4350 2550
-Connection ~ 4450 2900
-Wire Wire Line
 	4050 2550 3700 2550
 Wire Wire Line
 	3700 2550 3700 2900
@@ -104,4 +88,63 @@ Text Label 3700 3250 0    50   ~ 0
 3V
 Text Label 3700 3800 0    50   ~ 0
 GND
+$Comp
+L Analog_Switch:MAX40200AUK U1
+U 1 1 654909A3
+P 4100 1900
+F 0 "U1" H 4100 2267 50  0000 C CNN
+F 1 "MAX40200AUK" H 4100 2176 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4100 2400 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX40200.pdf" H 4100 2400 50  0001 C CNN
+	1    4100 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 1800 4500 2550
+Connection ~ 3700 2550
+$Comp
+L power:GND #PWR0101
+U 1 1 65492495
+P 3700 3800
+F 0 "#PWR0101" H 3700 3550 50  0001 C CNN
+F 1 "GND" H 3705 3627 50  0000 C CNN
+F 2 "" H 3700 3800 50  0001 C CNN
+F 3 "" H 3700 3800 50  0001 C CNN
+	1    3700 3800
+	1    0    0    -1  
+$EndComp
+Connection ~ 3700 3800
+$Comp
+L power:GND #PWR0102
+U 1 1 654927C4
+P 4100 2200
+F 0 "#PWR0102" H 4100 1950 50  0001 C CNN
+F 1 "GND" H 4105 2027 50  0000 C CNN
+F 2 "" H 4100 2200 50  0001 C CNN
+F 3 "" H 4100 2200 50  0001 C CNN
+	1    4100 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2550 3700 2000
+Wire Wire Line
+	3700 1800 3700 2000
+Connection ~ 3700 2000
+Wire Wire Line
+	4500 2550 4500 2900
+Connection ~ 4500 2550
+Wire Wire Line
+	4500 2900 4500 3250
+Connection ~ 4500 2900
+Wire Wire Line
+	4500 3250 4500 3800
+Connection ~ 4500 3250
+Wire Wire Line
+	4350 3250 4500 3250
+Wire Wire Line
+	4250 3800 4500 3800
+Wire Wire Line
+	4350 2900 4500 2900
+Wire Wire Line
+	4350 2550 4500 2550
 $EndSCHEMATC
